@@ -1,6 +1,8 @@
 # whisper-cloud
 A word cloud (tag cloud) implementation.
 
+![logo](whisper-cloud-logo.webp)
+
 ## Running locally
 ```bash
 npm run install
