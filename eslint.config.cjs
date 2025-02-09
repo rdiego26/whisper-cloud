@@ -1,14 +1,17 @@
-// eslint.config.js
-import js from "@eslint/js";
-import ts from "@typescript-eslint/eslint-plugin";
-import tsParser from "@typescript-eslint/parser";
+// eslint.config.cjs
+const js = require("@eslint/js");
+const ts = require("@typescript-eslint/eslint-plugin");
+const tsParser = require("@typescript-eslint/parser");
 
-export default [
+module.exports = [
   js.configs.recommended,
   {
     files: ["**/*.ts", "**/*.tsx"],
     languageOptions: {
       parser: tsParser,
+      globals: {
+        console: "readonly",
+      },
     },
     plugins: {
       "@typescript-eslint": ts,
@@ -19,6 +22,6 @@ export default [
     },
   },
   {
-    ignores: ["**/webpack/**", "**/build/**", "jest.config**", "babel.config**"],
+    ignores: ["**/webpack/**", "**/dist/**", "jest.config**", "babel.config**"],
   },
 ];

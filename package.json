@@ -1,0 +1,38 @@
+{
+  "name": "whisper-cloud",
+  "version": "1.0.0",
+  "description": "A word cloud (tag cloud) implementation.",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "start": "npm run build && node ./dist/index.js",
+    "dev": "ts-node-dev src/index.ts",
+    "build": "rimraf ./build && npm run lint && tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "word cloud",
+    "tag cloud",
+    "word frequency",
+    "tag frequency"
+  ],
+  "author": "Diego Ramos <rdiego26@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^22.13.1",
+    "axios": "^1.7.9",
+    "stopword": "^3.1.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3"
+  },
+  "devDependencies": {
+    "@types/stopword": "^2.0.3",
+    "@typescript-eslint/eslint-plugin": "^8.23.0",
+    "@typescript-eslint/parser": "^8.23.0",
+    "eslint": "^9.20.0",
+    "prettier": "^3.5.0",
+    "rimraf": "^6.0.1",
+    "ts-node-dev": "^2.0.0"
+  }
+}

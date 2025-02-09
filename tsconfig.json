@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    /* Basic Options */
+    "target": "ES2022", // Use modern ECMAScript features
+    "module": "CommonJS", // Use CommonJS for Node.js compatibility
+    "lib": ["ES2022", "DOM"], // Include standard libraries for ES2022 and DOM (if needed for browser-like APIs)
+    "outDir": "./dist", // Output compiled files to the `dist` directory
+    "rootDir": "./src", // Specify the root directory for source files
+    "strict": true, // Enable all strict type-checking options
+    "esModuleInterop": true, // Enable compatibility with CommonJS modules
+    "skipLibCheck": true, // Skip type-checking of declaration files (improves performance)
+    "forceConsistentCasingInFileNames": true, // Ensure consistent casing in file names
+    "moduleResolution": "node", // Use Node.js module resolution
+    "resolveJsonModule": true, // Allow importing JSON files
+    "isolatedModules": true, // Ensure each file can be safely transpiled independently
+    "noEmitOnError": true, // Do not emit JavaScript files if there are TypeScript errors
+
+    /* Linting and Code Quality */
+    "noUnusedLocals": true, // Report errors on unused local variables
+    "noUnusedParameters": true, // Report errors on unused function parameters
+    "noImplicitReturns": true, // Report errors when not all code paths return a value
+    "noFallthroughCasesInSwitch": true, // Report errors for fallthrough cases in switch statements
+
+    /* Advanced Options */
+    "sourceMap": true, // Generate source maps for debugging
+    "inlineSources": true, // Include source files in source maps
+    "declaration": false, // Do not generate `.d.ts` declaration files (optional)
+    "removeComments": true // Remove comments from the output
+  },
+  "include": ["src/**/*.ts"], // Include all TypeScript files in the `src` directory
+  "exclude": ["node_modules", "dist"] // Exclude `node_modules` and `dist` directories
+}
